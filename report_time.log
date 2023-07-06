@@ -1,0 +1,99 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : lenet
+Version: R-2020.09
+Date   : Sun May  7 12:03:47 2023
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: PVT_1P08V_125C   Library: slow_vdd1v2
+Wire Load Model Mode: top
+
+  Startpoint: f6/out_id_cnt_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sram_act_wdata0_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  f6/out_id_cnt_reg[3]/CK (DFFTRXL)                     0.0000 #   0.0000 r
+  f6/out_id_cnt_reg[3]/QN (DFFTRXL)                     0.1404     0.1404 r
+  f6/U17055/Y (NAND2BX1)                                0.0517     0.1922 r
+  f6/U530/Y (INVX1)                                     0.0287     0.2209 f
+  f6/U17062/Y (NAND2BX1)                                0.0319     0.2527 r
+  f6/U17063/Y (NAND2BX1)                                0.0586     0.3113 r
+  f6/U1016/Y (INVX1)                                    0.0534     0.3647 f
+  f6/U2537/Y (BUFX2)                                    0.0746     0.4393 f
+  f6/U2180/Y (BUFX2)                                    0.0626     0.5020 f
+  f6/U1803/Y (INVX1)                                    0.0520     0.5540 r
+  f6/U4199/Y (OA22X1)                                   0.1221     0.6761 r
+  f6/U21786/Y (AND4XL)                                  0.1459     0.8219 r
+  f6/U21787/Y (AND4XL)                                  0.1217     0.9436 r
+  f6/U21788/Y (AND4XL)                                  0.1242     1.0678 r
+  f6/U21789/Y (NOR2BX1)                                 0.0191     1.0868 f
+  f6/reluq/in0[0] (relu_quan)                           0.0000     1.0868 f
+  f6/reluq/U394/Y (NOR2BX1)                             0.0669     1.1537 f
+  f6/reluq/mult_622/a[0] (relu_quan_DW_mult_tc_8)       0.0000     1.1537 f
+  f6/reluq/mult_622/U3128/Y (BUFX2)                     0.0799     1.2336 f
+  f6/reluq/mult_622/U1401/Y (NAND2BX1)                  0.0591     1.2926 f
+  f6/reluq/mult_622/U3018/Y (OAI22X1)                   0.0384     1.3310 r
+  f6/reluq/mult_622/U956/S (ADDHX1)                     0.1181     1.4491 f
+  f6/reluq/mult_622/U3017/S (ADDFX1)                    0.1567     1.6059 r
+  f6/reluq/mult_622/U2860/CO (ADDFX1)                   0.0984     1.7043 r
+  f6/reluq/mult_622/U2745/CO (ADDFX1)                   0.0979     1.8022 r
+  f6/reluq/mult_622/U2743/S (ADDFX1)                    0.1473     1.9496 f
+  f6/reluq/mult_622/U2675/S (ADDFX1)                    0.1591     2.1087 r
+  f6/reluq/mult_622/U2611/Y (OR2XL)                     0.0434     2.1520 r
+  f6/reluq/mult_622/U2567/Y (NAND2X1)                   0.0415     2.1936 f
+  f6/reluq/mult_622/U2569/Y (NOR2X1)                    0.0339     2.2275 r
+  f6/reluq/mult_622/U2568/Y (AOI21X1)                   0.0545     2.2820 f
+  f6/reluq/mult_622/U2287/Y (OAI21X1)                   0.0511     2.3331 r
+  f6/reluq/mult_622/U2269/Y (AOI21X1)                   0.0678     2.4009 f
+  f6/reluq/mult_622/U2303/Y (OAI21X2)                   0.0525     2.4535 r
+  f6/reluq/mult_622/U2288/Y (AOI21X2)                   0.0556     2.5090 f
+  f6/reluq/mult_622/U2268/Y (OAI21X2)                   0.0484     2.5574 r
+  f6/reluq/mult_622/U2251/Y (AOI21X2)                   0.0551     2.6125 f
+  f6/reluq/mult_622/U2306/Y (OAI21X2)                   0.0429     2.6554 r
+  f6/reluq/mult_622/U2742/CO (ADDFX1)                   0.1029     2.7583 r
+  f6/reluq/mult_622/U2839/CO (ADDFX1)                   0.0980     2.8563 r
+  f6/reluq/mult_622/U2840/CO (ADDFX1)                   0.0979     2.9542 r
+  f6/reluq/mult_622/U2841/CO (ADDFX1)                   0.0979     3.0521 r
+  f6/reluq/mult_622/U2842/CO (ADDFX1)                   0.0979     3.1500 r
+  f6/reluq/mult_622/U2846/S (ADDFX1)                    0.1442     3.2943 f
+  f6/reluq/mult_622/product[62] (relu_quan_DW_mult_tc_8)
+                                                        0.0000     3.2943 f
+  f6/reluq/U290/Y (OR4X1)                               0.1587     3.4530 f
+  f6/reluq/U230/Y (OR4XL)                               0.1021     3.5552 f
+  f6/reluq/U278/Y (OR4X1)                               0.1566     3.7118 f
+  f6/reluq/U256/Y (INVX1)                               0.0412     3.7530 r
+  f6/reluq/U406/Y (NAND2BX1)                            0.0404     3.7934 f
+  f6/reluq/act0[0] (relu_quan)                          0.0000     3.7934 f
+  f6/U22851/Y (NOR2BX1)                                 0.0440     3.8374 f
+  f6/act_wdata0[0] (fc6)                                0.0000     3.8374 f
+  U569/Y (AOI22X1)                                      0.0501     3.8874 r
+  U568/Y (NAND3BXL)                                     0.0579     3.9453 f
+  sram_act_wdata0_reg[0]/RN (DFFTRXL)                   0.0000     3.9453 f
+  data arrival time                                                3.9453
+
+  clock clk (rise edge)                                 4.0000     4.0000
+  clock network delay (ideal)                           0.0000     4.0000
+  sram_act_wdata0_reg[0]/CK (DFFTRXL)                   0.0000     4.0000 r
+  library setup time                                   -0.0547     3.9453
+  data required time                                               3.9453
+  --------------------------------------------------------------------------
+  data required time                                               3.9453
+  data arrival time                                               -3.9453
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0000
+
+
+1
